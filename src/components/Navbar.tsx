@@ -7,6 +7,7 @@ const Container = styled.div`
   background-color: black;
   color: white;
   padding: 0px 35px;
+  /* border-bottom: 1px solid white; */
 `;
 
 const Wrapper = styled.div`
@@ -31,11 +32,6 @@ const Title = styled.h1`
   margin-left: -20px;
   letter-spacing: -1px;
   transition: 2s all ease;
-  &:hover {
-    /* display: none; */
-    /* opacity: 0; */
-    /* width: 0px; */
-  }
 `;
 
 const Home = styled.div`
@@ -50,9 +46,9 @@ const Home = styled.div`
 const URL = styled.div`
   padding: 0px 0px;
   padding-left: 30px;
-  text-transform: uppercase;
+  text-transform: ${(props) => (props.support ? "capitalize" : "uppercase")};
   font-size: x-small;
-  font-weight: 400;
+  font-weight: ${(props) => (props.support ? "200" : "400")};
   transform: scaleY(0.9);
   &:hover {
     color: green;
@@ -62,7 +58,7 @@ const URL = styled.div`
 const Right = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-right: 10px;
 `;
 
 const Language = styled.img`
@@ -70,9 +66,10 @@ const Language = styled.img`
 `;
 
 const Icon = styled.div`
-  padding-right: 25px;
-  font-size: 30px;
-  font-weight: 100;
+  margin-right: 30px;
+  margin-top: 5px;
+  font-size: 24px;
+  cursor: pointer;
   & img {
     margin-left: 25px;
   }
@@ -80,39 +77,41 @@ const Icon = styled.div`
 
 const Navbar = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Left>
-          <Home>
-            <Logo src="./logo.png"></Logo>
-            <Title>Skullcandy</Title>
-          </Home>
-          <URL>
-            <Link href={"/shop"}>shop</Link>
-          </URL>
-          <URL>
-            <Link href={"/inside-skullcandy"}>Inside Skullcandy</Link>
-          </URL>
-        </Left>
-        <Right>
-          <URL>
-            <Link href={"/support"}>Support</Link>
-          </URL>
-          <Icon>
-            <Language src="./US_EN_FLAG.webp"></Language>
-          </Icon>
-          <Icon>
-            <HiOutlineUser />
-          </Icon>
-          <Icon>
-            <HiOutlineSearch />
-          </Icon>
-          <Icon>
-            <BsBag />
-          </Icon>
-        </Right>
-      </Wrapper>
-    </Container>
+    <>
+      <Container>
+        <Wrapper>
+          <Left>
+            <Home>
+              <Logo src="./logo.png"></Logo>
+              <Title>Skullcandy</Title>
+            </Home>
+            <URL>
+              <Link href={"/shop"}>shop</Link>
+            </URL>
+            <URL>
+              <Link href={"/inside-skullcandy"}>Inside Skullcandy</Link>
+            </URL>
+          </Left>
+          <Right>
+            <URL support={true}>
+              <Link href={"/support"}>Support</Link>
+            </URL>
+            <Icon>
+              <Language src="./US_EN_FLAG.webp"></Language>
+            </Icon>
+            <Icon>
+              <HiOutlineUser />
+            </Icon>
+            <Icon>
+              <HiOutlineSearch />
+            </Icon>
+            <Icon>
+              <BsBag />
+            </Icon>
+          </Right>
+        </Wrapper>
+      </Container>
+    </>
   );
 };
 export default Navbar;

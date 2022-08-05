@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Announcement from "../components/Announcement";
 import Container from "../components/UI/Container";
-
-import styles from "../styles/Home.module.css";
 
 const IndexPage: NextPage = () => {
   return (
@@ -19,9 +18,8 @@ const IndexPage: NextPage = () => {
         ></meta>
         <link rel="icon" href="/favicon-32x32.webp" />
       </Head>
-      <div className={styles.container}>
-        <Container>main page</Container>
-      </div>
+      <Announcement />
+      <Container>main page</Container>
     </>
   );
 };
