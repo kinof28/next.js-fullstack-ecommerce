@@ -1,63 +1,29 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Container from "../components/UI/Container";
 
-import Counter from '../features/counter/Counter'
-import styles from '../styles/Home.module.css'
+import styles from "../styles/Home.module.css";
 
 const IndexPage: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Redux Toolkit</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>
+          Skullcandy Headphones, True Wireless Earbuds, Speakers &amp; More
+        </title>
+        <meta
+          name="description"
+          content="Discover life at full volume with headphones, earbuds, speakers &amp; more.
+          Skullcandy is your one-stop shop for new music, culture &amp; 
+          audio built to #STAYLOUD."
+        ></meta>
+        <link rel="icon" href="/favicon-32x32.webp" />
       </Head>
-      <header className={styles.header}>
-        <img src="/logo.svg" className={styles.logo} alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className={styles.link}
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className={styles.link}
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  )
-}
+      <div className={styles.container}>
+        <Container>main page</Container>
+      </div>
+    </>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
