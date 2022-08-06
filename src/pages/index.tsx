@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Announcement from "../components/Announcement";
 import Container from "../components/UI/Container";
-
+import Models from "../components/home/Models";
 const IndexPage: NextPage = () => {
   return (
     <>
@@ -19,6 +19,7 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon-32x32.webp" />
       </Head>
       <Announcement />
+      <Models />
       <Container>main page</Container>
     </>
   );
