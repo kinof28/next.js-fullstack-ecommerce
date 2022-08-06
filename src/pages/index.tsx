@@ -3,6 +3,7 @@ import Head from "next/head";
 import Announcement from "../components/Announcement";
 import Container from "../components/UI/Container";
 import Models from "../components/home/Models";
+import Trending from "../components/home/Trending";
 const IndexPage: NextPage = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const IndexPage: NextPage = () => {
       </Head>
       <Announcement />
       <Models />
+      <Trending />
       <Container>main page</Container>
     </>
   );
