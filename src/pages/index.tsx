@@ -1,9 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import styled from "styled-components";
+
 import Announcement from "../components/Announcement";
 import Container from "../components/UI/Container";
 import Models from "../components/home/Models";
 import Trending from "../components/home/Trending";
+
+const Image = styled.img`
+  width: 100%;
+  cursor: pointer;
+`;
+
 const IndexPage: NextPage = () => {
   return (
     <>
@@ -22,7 +30,9 @@ const IndexPage: NextPage = () => {
       <Announcement />
       <Models />
       <Trending />
-      <Container>main page</Container>
+      <Image src="./workshop.avif" alt="Workshop" />
+      <Image src="./find-love.avif" alt="Find Love" />
+      {/* <Container>main page</Container> */}
     </>
   );
 };
