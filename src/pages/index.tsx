@@ -6,10 +6,12 @@ import Announcement from "../components/Announcement";
 import Container from "../components/UI/Container";
 import Models from "../components/home/Models";
 import Trending from "../components/home/Trending";
+import NewsLetter from "../components/NewsLetter";
 
 const Image = styled.img`
   width: 100%;
   cursor: pointer;
+  margin-top: ${(props) => props.second && "-4px"};
 `;
 
 const IndexPage: NextPage = () => {
@@ -31,7 +33,8 @@ const IndexPage: NextPage = () => {
       <Models />
       <Trending />
       <Image src="./workshop.avif" alt="Workshop" />
-      <Image src="./find-love.avif" alt="Find Love" />
+      <Image src="./find-love.avif" alt="Find Love" second={true} />
+      <NewsLetter />
       {/* <Container>main page</Container> */}
     </>
   );
