@@ -66,7 +66,26 @@ const Right = styled.div`
   }
 `;
 
-const Form = styled.div``;
+const Form = styled.div`
+  & input {
+    padding: 10px 20px;
+    outline: none;
+    width: 50%;
+    height: 2.5rem;
+  }
+  & button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  & button:hover {
+    color: grey;
+  }
+`;
 
 const Column = styled.div`
   margin-right: 50px;
@@ -99,7 +118,7 @@ const NewsLetter = () => {
       <Left>
         <h3>Hear it First</h3>
         <Form>
-          <input />
+          <input placeholder="Sign up for Emails" type="email" />
           <button>{">"}</button>
         </Form>
       </Left>
