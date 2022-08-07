@@ -19,6 +19,14 @@ const Container = styled.div`
 
 const Left = styled.div`
   width: 25%;
+  padding-top: 4%;
+  text-align: center;
+  & h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
 `;
 
 const Center = styled.div`
@@ -47,6 +55,15 @@ const CenterContent = styled.div`
 
 const Right = styled.div`
   padding-top: 3%;
+  width: 15%;
+  margin-left: -5%;
+  text-align: center;
+  & h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
 `;
 
 const Form = styled.div``;
@@ -55,13 +72,26 @@ const Column = styled.div`
   margin-right: 50px;
   & a {
     display: block;
+    transition: all 0.2s ease;
   }
   & a:hover {
     color: grey;
   }
 `;
 
-const IconsContainer = styled.div``;
+const IconsContainer = styled.div`
+  display: flex;
+  font-size: 30px;
+  width: 100%;
+  justify-content: space-between;
+  & svg {
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  & svg:hover {
+    color: grey;
+  }
+`;
 
 const NewsLetter = () => {
   return (
