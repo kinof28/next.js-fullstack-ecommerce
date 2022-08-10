@@ -2,15 +2,17 @@ import Link from "next/link";
 import styled from "styled-components";
 import { HiOutlineSearch, HiOutlineUser } from "react-icons/hi";
 import { BsBag } from "react-icons/bs";
+import { useState } from "react";
+import DropDown from "./UI/DropDown";
 
 const Container = styled.div`
-  background-color: black;
-  color: white;
-  padding: 0px 35px;
-  /* border-bottom: 1px solid white; */
+  position: relative;
 `;
 
 const Wrapper = styled.div`
+  background-color: black;
+  color: white;
+  padding: 0px 35px;
   margin-top: -5px;
   display: flex;
   align-items: center;
@@ -76,6 +78,9 @@ const Icon = styled.div`
 `;
 
 const Navbar = () => {
+  const [displayDorpDown, setDisplayDropDown] = useState(false);
+  const [dropDownContent, setDropDownContent] = useState("shop");
+
   return (
     <>
       <Container>
@@ -85,19 +90,45 @@ const Navbar = () => {
               <Logo src="./logo.png"></Logo>
               <Title>Skullcandy</Title>
             </Home>
-            <URL>
+            <URL
+              onMouseEnter={() => {
+                setDisplayDropDown(true);
+                setDropDownContent("shop");
+              }}
+              onMouseLeave={() => setDisplayDropDown(false)}
+            >
               <Link href={"/shop"}>shop</Link>
             </URL>
-            <URL>
+            <URL
+              onMouseEnter={() => {
+                setDisplayDropDown(true);
+                setDropDownContent("inside skullcandy");
+              }}
+              onMouseLeave={() => setDisplayDropDown(false)}
+            >
               <Link href={"/inside-skullcandy"}>Inside Skullcandy</Link>
             </URL>
           </Left>
           <Right>
-            <URL support={true}>
+            <URL
+              support={true}
+              onMouseEnter={() => {
+                setDisplayDropDown(true);
+                setDropDownContent("support");
+              }}
+              onMouseLeave={() => setDisplayDropDown(false)}
+            >
               <Link href={"/support"}>Support</Link>
             </URL>
             <Icon>
-              <Language src="./US_EN_FLAG.webp"></Language>
+              <Language
+                src="./US_EN_FLAG.webp"
+                onMouseEnter={() => {
+                  setDisplayDropDown(true);
+                  setDropDownContent("language");
+                }}
+                onMouseLeave={() => setDisplayDropDown(false)}
+              />
             </Icon>
             <Icon>
               <HiOutlineUser />
@@ -110,6 +141,7 @@ const Navbar = () => {
             </Icon>
           </Right>
         </Wrapper>
+        <DropDown displayed={displayDorpDown} content={dropDownContent} />
       </Container>
     </>
   );
