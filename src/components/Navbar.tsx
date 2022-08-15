@@ -102,7 +102,7 @@ const Navbar = () => {
             <URL
               onMouseEnter={() => {
                 setDisplayDropDown(true);
-                setDropDownContent("inside skullcandy");
+                setDropDownContent("inside");
               }}
               onMouseLeave={() => setDisplayDropDown(false)}
             >
