@@ -39,7 +39,6 @@ const Title = styled.h1`
 const Home = styled.div`
   display: flex;
   align-items: center;
-  /* margin-right: 20px; */
   &:hover {
     cursor: pointer;
   }
@@ -47,13 +46,16 @@ const Home = styled.div`
 
 const URL = styled.div`
   padding: 0px 0px;
-  padding-left: 30px;
+  margin-left: 30px;
   text-transform: ${(props) => (props.support ? "capitalize" : "uppercase")};
   font-size: x-small;
   font-weight: ${(props) => (props.support ? "200" : "400")};
   transform: scaleY(0.9);
-  &:hover {
-    color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & a {
+    margin: 12px 0px;
   }
 `;
 
@@ -63,8 +65,16 @@ const Right = styled.div`
   margin-right: 10px;
 `;
 
-const Language = styled.img`
-  height: 25px;
+const Language = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & img {
+    height: 25px;
+
+    margin: 4px 0px;
+  }
+  margin-left: 25px;
 `;
 
 const Icon = styled.div`
@@ -72,12 +82,14 @@ const Icon = styled.div`
   margin-top: 5px;
   font-size: 24px;
   cursor: pointer;
-  & img {
-    margin-left: 25px;
-  }
 `;
-
-const Navbar = () => {
+const BorderBottom = styled.div`
+  height: 2px;
+  width: ${(props) => (props.displayed ? "100%" : "0%")};
+  background-color: #969696;
+  transition: width 0.25s ease-out;
+`;
+const Navbar = (props) => {
   const [displayDorpDown, setDisplayDropDown] = useState(false);
   const [dropDownContent, setDropDownContent] = useState("shop");
 
@@ -95,18 +107,30 @@ const Navbar = () => {
                 setDisplayDropDown(true);
                 setDropDownContent("shop");
               }}
-              onMouseLeave={() => setDisplayDropDown(false)}
             >
               <Link href={"/shop"}>shop</Link>
+              <BorderBottom
+                displayed={
+                  displayDorpDown &&
+                  props.displayed &&
+                  dropDownContent === "shop"
+                }
+              ></BorderBottom>
             </URL>
             <URL
               onMouseEnter={() => {
                 setDisplayDropDown(true);
                 setDropDownContent("inside");
               }}
-              onMouseLeave={() => setDisplayDropDown(false)}
             >
               <Link href={"/inside-skullcandy"}>Inside Skullcandy</Link>
+              <BorderBottom
+                displayed={
+                  displayDorpDown &&
+                  props.displayed &&
+                  dropDownContent === "inside"
+                }
+              ></BorderBottom>
             </URL>
           </Left>
           <Right>
@@ -116,32 +140,61 @@ const Navbar = () => {
                 setDisplayDropDown(true);
                 setDropDownContent("support");
               }}
-              onMouseLeave={() => setDisplayDropDown(false)}
             >
               <Link href={"/support"}>Support</Link>
+              <BorderBottom
+                displayed={
+                  displayDorpDown &&
+                  props.displayed &&
+                  dropDownContent === "support"
+                }
+              ></BorderBottom>
             </URL>
             <Icon>
-              <Language
-                src="./US_EN_FLAG.webp"
+              <Language>
+                <img
+                  src="./US_EN_FLAG.webp"
+                  onMouseEnter={() => {
+                    setDisplayDropDown(true);
+                    setDropDownContent("language");
+                  }}
+                />
+                <BorderBottom
+                  displayed={
+                    displayDorpDown &&
+                    props.displayed &&
+                    dropDownContent === "language"
+                  }
+                ></BorderBottom>
+              </Language>
+            </Icon>
+            <Icon>
+              <HiOutlineUser
                 onMouseEnter={() => {
-                  setDisplayDropDown(true);
-                  setDropDownContent("language");
+                  setDisplayDropDown(false);
                 }}
-                onMouseLeave={() => setDisplayDropDown(false)}
               />
             </Icon>
             <Icon>
-              <HiOutlineUser />
+              <HiOutlineSearch
+                onMouseEnter={() => {
+                  setDisplayDropDown(false);
+                }}
+              />
             </Icon>
             <Icon>
-              <HiOutlineSearch />
-            </Icon>
-            <Icon>
-              <BsBag />
+              <BsBag
+                onMouseEnter={() => {
+                  setDisplayDropDown(false);
+                }}
+              />
             </Icon>
           </Right>
         </Wrapper>
-        <DropDown displayed={displayDorpDown} content={dropDownContent} />
+        <DropDown
+          displayed={displayDorpDown && props.displayed}
+          content={dropDownContent}
+        />
       </Container>
     </>
   );

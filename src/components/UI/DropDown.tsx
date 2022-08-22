@@ -3,19 +3,25 @@ import styled from "styled-components";
 const Container = styled.div`
   background: white;
   color: black;
-  height: ${(props) => (props.displayed ? "30vh" : "0vh")};
+  height: ${(props) => (props.displayed ? "max-content" : "0vh")};
   display: ${(props) => (props.displayed ? "flex" : "none")};
+  opacity: ${(props) => (props.displayed ? "1" : "0")};
   width: 100%;
   z-index: 1;
   border-bottom: 1px solid #2c2c2d;
   position: absolute;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   & h3 {
     margin: 0;
   }
 `;
 
-const Shop = styled.div``;
+const Shop = styled.div`
+  display: flex;
+  & img {
+    width: 100%;
+  }
+`;
 const Inside = styled.div`
   display: flex;
 `;
