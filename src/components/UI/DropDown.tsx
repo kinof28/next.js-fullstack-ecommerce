@@ -8,7 +8,7 @@ const Container = styled.div`
   opacity: ${(props) => (props.displayed ? "1" : "0")};
   width: 100%;
   z-index: 1;
-  border-bottom: 1px solid #2c2c2d;
+  /* border-bottom: 1px solid #2c2c2d; */
   position: absolute;
   transition: all 1s ease;
   & h3 {
@@ -24,6 +24,14 @@ const Shop = styled.div`
 `;
 const Inside = styled.div`
   display: flex;
+  & h3 {
+    text-transform: uppercase;
+    padding: 2rem 1.3rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    letter-spacing: -2px;
+  }
 `;
 const Support = styled.div``;
 const Region = styled.div``;

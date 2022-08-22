@@ -105,6 +105,7 @@ const Navbar = (props) => {
             <URL
               onMouseEnter={() => {
                 setDisplayDropDown(true);
+                props.dropDown();
                 setDropDownContent("shop");
               }}
             >
