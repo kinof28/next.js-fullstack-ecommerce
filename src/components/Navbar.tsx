@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { HiOutlineSearch, HiOutlineUser } from "react-icons/hi";
-import { BsBag } from "react-icons/bs";
-import { useState } from "react";
+import { BsBag, BsWindowSidebar } from "react-icons/bs";
+import { useEffect, useRef, useState } from "react";
 import DropDown from "./UI/DropDown";
 
 const Container = styled.div`
@@ -35,7 +35,9 @@ const Title = styled.h1`
   margin: 0;
   margin-left: -20px;
   letter-spacing: -1px;
-  transition: 2s all ease;
+  transition: all 0.25s ease-out;
+  opacity: ${(props) => (props.top ? 1 : 0)};
+  width: ${(props) => (props.top ? "11vw" : "0vw")};
 `;
 
 const Home = styled.div`
@@ -96,6 +98,19 @@ const PlaceHolder = styled.div`
 `;
 const Navbar = (props) => {
   const [dropDownContent, setDropDownContent] = useState("shop");
+  const [top, setTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY === 0) setTop(true);
+      else if (top) setTop(false);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -104,7 +119,7 @@ const Navbar = (props) => {
           <Left>
             <Home>
               <Logo src="./logo.png"></Logo>
-              <Title>Skullcandy</Title>
+              <Title top={top}>Skullcandy</Title>
             </Home>
             <URL
               onMouseEnter={() => {
