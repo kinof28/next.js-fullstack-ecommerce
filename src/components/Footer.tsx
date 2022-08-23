@@ -6,10 +6,10 @@ const Container = styled.div`
   margin-top: -4px;
   letter-spacing: 1px;
   background-color: rgb(0, 0, 0);
-  color: white;
+  color: #969696;
   border-top: 1px solid #2c2c2d;
-  font-size: 12px;
-  font-weight: 200;
+  font-size: 0.7rem;
+  font-weight: 400;
 `;
 
 const Left = styled.div`
@@ -19,6 +19,10 @@ const Left = styled.div`
   align-items: center;
   & a {
     padding: 0px 5px;
+    transition: color 0.2s ease-out;
+  }
+  & a:hover {
+    color: white;
   }
 `;
 
