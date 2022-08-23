@@ -4,9 +4,11 @@ import { HiOutlineSearch, HiOutlineUser } from "react-icons/hi";
 import { BsBag } from "react-icons/bs";
 import { useState } from "react";
 import DropDown from "./UI/DropDown";
+import Overlay from "./UI/Overlay";
 
 const Container = styled.div`
   position: relative;
+  z-index: 1;
 `;
 
 const Wrapper = styled.div`
@@ -121,6 +123,7 @@ const Navbar = (props) => {
             <URL
               onMouseEnter={() => {
                 setDisplayDropDown(true);
+                props.dropDown();
                 setDropDownContent("inside");
               }}
             >
@@ -139,6 +142,7 @@ const Navbar = (props) => {
               support={true}
               onMouseEnter={() => {
                 setDisplayDropDown(true);
+                props.dropDown();
                 setDropDownContent("support");
               }}
             >
@@ -157,6 +161,7 @@ const Navbar = (props) => {
                   src="./US_EN_FLAG.webp"
                   onMouseEnter={() => {
                     setDisplayDropDown(true);
+                    props.dropDown();
                     setDropDownContent("language");
                   }}
                 />
@@ -197,6 +202,7 @@ const Navbar = (props) => {
           content={dropDownContent}
         />
       </Container>
+      <Overlay displayed={displayDorpDown && props.displayed} />
     </>
   );
 };

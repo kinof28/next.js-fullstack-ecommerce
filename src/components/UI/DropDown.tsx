@@ -21,6 +21,10 @@ const Shop = styled.div`
   & img {
     width: 100%;
   }
+  & div {
+    flex: 1;
+    padding: 1rem;
+  }
 `;
 const Inside = styled.div`
   display: flex;
