@@ -1,5 +1,12 @@
-import styled from "styled-components";
-
+import styled, { keyframes } from "styled-components";
+const fade = keyframes`
+0%{
+  opacity: 0;
+}
+100%{
+  opacity: 1;
+  }
+`;
 const Container = styled.div`
   background: white;
   color: black;
@@ -13,8 +20,11 @@ const Container = styled.div`
   & h3 {
     margin: 0;
   }
+  & div:first-child {
+    animation-name: ${fade};
+    animation-duration: 0.5s;
+  }
 `;
-
 const Shop = styled.div`
   display: flex;
   width: 100%;
