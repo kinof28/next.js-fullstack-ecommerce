@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
       <Navbar
         displayed={displayDesktopDropDown}
         dropDown={() => setDisplayDesktopDropDown(true)}
+        dropUp={() => setDisplayDesktopDropDown(false)}
       />
       <main>{children}</main>
       <Overlay

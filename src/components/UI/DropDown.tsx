@@ -42,8 +42,18 @@ const Region = styled.div``;
 const Language = styled.div``;
 const ImageContainer = styled.div`
   border-left: 1px solid #2c2c2d;
+  cursor: pointer;
+  overflow: hidden;
   & img {
     width: 100%;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 50ms;
+    /* height: auto; */
+    /* max-width: 100%; */
+    vertical-align: middle;
+  }
+  &:hover img {
+    transform: scale(1.04);
+    opacity: 0.9;
   }
 `;
 

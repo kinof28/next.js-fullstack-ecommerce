@@ -92,7 +92,6 @@ const BorderBottom = styled.div`
   transition: width 0.25s ease-out;
 `;
 const Navbar = (props) => {
-  const [displayDorpDown, setDisplayDropDown] = useState(false);
   const [dropDownContent, setDropDownContent] = useState("shop");
 
   return (
@@ -106,34 +105,24 @@ const Navbar = (props) => {
             </Home>
             <URL
               onMouseEnter={() => {
-                setDisplayDropDown(true);
                 props.dropDown();
                 setDropDownContent("shop");
               }}
             >
               <Link href={"/shop"}>shop</Link>
               <BorderBottom
-                displayed={
-                  displayDorpDown &&
-                  props.displayed &&
-                  dropDownContent === "shop"
-                }
+                displayed={props.displayed && dropDownContent === "shop"}
               ></BorderBottom>
             </URL>
             <URL
               onMouseEnter={() => {
-                setDisplayDropDown(true);
                 props.dropDown();
                 setDropDownContent("inside");
               }}
             >
               <Link href={"/inside-skullcandy"}>Inside Skullcandy</Link>
               <BorderBottom
-                displayed={
-                  displayDorpDown &&
-                  props.displayed &&
-                  dropDownContent === "inside"
-                }
+                displayed={props.displayed && dropDownContent === "inside"}
               ></BorderBottom>
             </URL>
           </Left>
@@ -141,18 +130,13 @@ const Navbar = (props) => {
             <URL
               support={true}
               onMouseEnter={() => {
-                setDisplayDropDown(true);
                 props.dropDown();
                 setDropDownContent("support");
               }}
             >
               <Link href={"/support"}>Support</Link>
               <BorderBottom
-                displayed={
-                  displayDorpDown &&
-                  props.displayed &&
-                  dropDownContent === "support"
-                }
+                displayed={props.displayed && dropDownContent === "support"}
               ></BorderBottom>
             </URL>
             <Icon>
@@ -160,49 +144,40 @@ const Navbar = (props) => {
                 <img
                   src="./US_EN_FLAG.webp"
                   onMouseEnter={() => {
-                    setDisplayDropDown(true);
                     props.dropDown();
                     setDropDownContent("language");
                   }}
                 />
                 <BorderBottom
-                  displayed={
-                    displayDorpDown &&
-                    props.displayed &&
-                    dropDownContent === "language"
-                  }
+                  displayed={props.displayed && dropDownContent === "language"}
                 ></BorderBottom>
               </Language>
             </Icon>
             <Icon>
               <HiOutlineUser
                 onMouseEnter={() => {
-                  setDisplayDropDown(false);
+                  props.dropUp();
                 }}
               />
             </Icon>
             <Icon>
               <HiOutlineSearch
                 onMouseEnter={() => {
-                  setDisplayDropDown(false);
+                  props.dropUp();
                 }}
               />
             </Icon>
             <Icon>
               <BsBag
                 onMouseEnter={() => {
-                  setDisplayDropDown(false);
+                  props.dropUp();
                 }}
               />
             </Icon>
           </Right>
         </Wrapper>
-        <DropDown
-          displayed={displayDorpDown && props.displayed}
-          content={dropDownContent}
-        />
+        <DropDown displayed={props.displayed} content={dropDownContent} />
       </Container>
-      <Overlay displayed={displayDorpDown && props.displayed} />
     </>
   );
 };
