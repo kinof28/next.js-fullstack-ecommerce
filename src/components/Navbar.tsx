@@ -4,10 +4,10 @@ import { HiOutlineSearch, HiOutlineUser } from "react-icons/hi";
 import { BsBag } from "react-icons/bs";
 import { useState } from "react";
 import DropDown from "./UI/DropDown";
-import Overlay from "./UI/Overlay";
 
 const Container = styled.div`
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1;
 `;
 
@@ -90,6 +90,9 @@ const BorderBottom = styled.div`
   width: ${(props) => (props.displayed ? "100%" : "0%")};
   background-color: #969696;
   transition: width 0.25s ease-out;
+`;
+const PlaceHolder = styled.div`
+  height: 3.5rem;
 `;
 const Navbar = (props) => {
   const [dropDownContent, setDropDownContent] = useState("shop");
@@ -178,6 +181,7 @@ const Navbar = (props) => {
         </Wrapper>
         <DropDown displayed={props.displayed} content={dropDownContent} />
       </Container>
+      <PlaceHolder></PlaceHolder>
     </>
   );
 };

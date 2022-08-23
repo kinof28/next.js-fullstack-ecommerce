@@ -33,6 +33,7 @@ const Shop = styled.div`
   & a {
     display: block;
     padding: 5px 2rem;
+    transition: color 0.2s ease-out;
   }
   & a:hover {
     color: #949494;
@@ -50,6 +51,7 @@ const Shop = styled.div`
     font-size: 0.8rem;
     display: flex;
     justify-content: space-between;
+    transition: color 0.2s ease-out;
   }
   & div:nth-last-child(1):hover {
     cursor: pointer;
@@ -80,7 +82,7 @@ const Support = styled.div`
     display: block;
     margin: 1rem 0px;
     font-weight: 800;
-    transition: color 0.25s ease-out;
+    transition: color 0.2s ease-out;
   }
   & a:hover {
     color: #949494;
@@ -94,7 +96,7 @@ const Language = styled.div`
   padding: 1rem 3rem;
   & a {
     display: block;
-    transition: color 0.25s ease-out;
+    transition: color 0.2s ease-out;
     font-size: 0.75rem;
     line-height: 1.5rem;
     transform: scaleY(0.97);
