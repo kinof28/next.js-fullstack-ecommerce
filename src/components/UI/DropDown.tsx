@@ -8,7 +8,6 @@ const Container = styled.div`
   opacity: ${(props) => (props.displayed ? "1" : "0")};
   width: 100%;
   z-index: 1;
-  /* border-bottom: 1px solid #2c2c2d; */
   position: absolute;
   transition: all 1s ease;
   & h3 {
@@ -18,12 +17,43 @@ const Container = styled.div`
 
 const Shop = styled.div`
   display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 0.7rem;
+  font-weight: 500;
   & img {
     width: 100%;
   }
-  & div {
-    flex: 1;
-    padding: 1rem;
+  & div:first-child a {
+    border-right: 1px solid #c6c6c6;
+    padding-right: 3rem;
+    margin-right: 2rem;
+  }
+  & a {
+    display: block;
+    padding: 5px 2rem;
+  }
+  & a:hover {
+    color: #949494;
+  }
+  & img {
+    width: 13rem;
+  }
+  & h3 {
+    padding: 1px 2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  & h3:nth-child(2) {
+    padding: 5px 0px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  & div:nth-last-child(1):hover {
+    cursor: pointer;
+    color: #949494;
   }
 `;
 const Inside = styled.div`
@@ -47,14 +77,23 @@ const ImageContainer = styled.div`
   & img {
     width: 100%;
     transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 50ms;
-    /* height: auto; */
-    /* max-width: 100%; */
     vertical-align: middle;
   }
   &:hover img {
     transform: scale(1.04);
     opacity: 0.9;
   }
+`;
+
+const Red = styled.span`
+  color: #ff5100;
+  &:hover {
+    color: #949494;
+  }
+`;
+
+const Grey = styled.span`
+  color: #949494;
 `;
 
 const DropDown = (props) => {
@@ -68,20 +107,26 @@ const DropDown = (props) => {
             <a href="#">Skull-IQ Products</a>
             <a href="#">The Workshop</a>
             <a href="#">Corporate Sales</a>
-            <a href="#">Sale</a>
+            <a href="#">
+              <Red>Sale</Red>
+            </a>
           </div>
           <div>
             <h3>Earbuds</h3>
             <a href="#">True Wireless Earbuds</a>
             <a href="#">Wireless Earbuds</a>
             <a href="#">Wired Earbuds</a>
-            <a href="#">Shop All Earbuds</a>
+            <a href="#">
+              <Grey>Shop All Earbuds</Grey>
+            </a>
           </div>
           <div>
             <h3>Headphones</h3>
             <a href="#">Wireless Headphones</a>
             <a href="#">Wired Headphones</a>
-            <a href="#">Shop All Headphones</a>
+            <a href="#">
+              <Grey>Shop All Headphones</Grey>
+            </a>
           </div>
           <div>
             <h3>Accessories</h3>
@@ -92,7 +137,9 @@ const DropDown = (props) => {
               src="./dropdown/desktop-dropdown-featured-product.jpg"
               alt="Find Your Perfect Pair"
             />
-            <h3>Find Your Perfect Pair</h3>
+            <h3>
+              Find Your Perfect Pair <span>▶</span>
+            </h3>
           </div>
         </Shop>
       )}
@@ -170,4 +217,5 @@ const DropDown = (props) => {
     </Container>
   );
 };
+
 export default DropDown;
