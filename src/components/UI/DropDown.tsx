@@ -67,7 +67,23 @@ const Inside = styled.div`
     letter-spacing: -2px;
   }
 `;
-const Support = styled.div``;
+const Support = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 13rem;
+  width: 100%;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  & a {
+    display: block;
+    margin: 1rem 0px;
+    font-weight: 800;
+    transition: color 0.25s ease-out;
+  }
+  & a:hover {
+    color: #949494;
+  }
+`;
 const Region = styled.div``;
 const Language = styled.div``;
 const ImageContainer = styled.div`
@@ -169,10 +185,12 @@ const DropDown = (props) => {
       )}
       {props.content === "support" && (
         <Support>
-          <h3>Help Center</h3>
-          <h3>Product Help</h3>
-          <h3>Warranty</h3>
-          <h3>Order Status</h3>
+          <div>
+            <a href="#">Help Center</a>
+            <a href="#">Product Help</a>
+            <a href="#">Warranty</a>
+            <a href="#">Order Status</a>
+          </div>
         </Support>
       )}
       {props.content === "language" && (
