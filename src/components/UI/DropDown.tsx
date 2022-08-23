@@ -3,11 +3,11 @@ import styled from "styled-components";
 const Container = styled.div`
   background: white;
   color: black;
-  height: ${(props) => (props.displayed ? "max-content" : "0vh")};
-  display: ${(props) => (props.displayed ? "flex" : "none")};
-  opacity: ${(props) => (props.displayed ? "1" : "0")};
+  height: fit-content;
+  transform: ${(props) =>
+    props.displayed ? "translate3d(0,0,0)" : "translate3d(0,-100%,0)"};
   width: 100%;
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   transition: all 1s ease;
   & h3 {
