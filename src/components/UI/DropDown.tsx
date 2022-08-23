@@ -56,6 +56,7 @@ const Shop = styled.div`
     color: #949494;
   }
 `;
+
 const Inside = styled.div`
   display: flex;
   & h3 {
@@ -67,6 +68,7 @@ const Inside = styled.div`
     letter-spacing: -2px;
   }
 `;
+
 const Support = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -84,8 +86,31 @@ const Support = styled.div`
     color: #949494;
   }
 `;
-const Region = styled.div``;
-const Language = styled.div``;
+
+const Language = styled.div`
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  & a {
+    display: block;
+    transition: color 0.25s ease-out;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    transform: scaleY(0.97);
+  }
+  & a:hover {
+    color: #949494;
+  }
+  & h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+`;
+
 const ImageContainer = styled.div`
   border-left: 1px solid #2c2c2d;
   cursor: pointer;
@@ -195,41 +220,35 @@ const DropDown = (props) => {
       )}
       {props.content === "language" && (
         <Language>
-          <Region>
+          <div>
             <h3>North America</h3>
             <a href="#">Canada</a>
             <a href="#">Mexico</a>
             <a href="#">United States</a>
-          </Region>
-          <Region>
             <h3>South America</h3>
             <a href="#">Argentina</a>
             <a href="#">Chile</a>
             <a href="#">Peru</a>
-          </Region>
-          <Region>
-            <h3>Europ / Middle East</h3>
+          </div>
+          <div>
+            <h3>Europe / Middle East</h3>
             <a href="#">United Kingdom</a>
             <a href="#">Europe (EN)</a>
             <a href="#">Other Middle Eastern Countries</a>
-          </Region>
-          <Region>
             <h3>Africa</h3>
             <a href="#">South Africa</a>
-          </Region>
-          <Region>
+          </div>
+          <div>
             <h3>Asia</h3>
             <a href="#">Japan | 日本</a>
             <a href="#">Mainland China | 中国内地</a>
             <a href="#">ChinaTaiwan | 中国台湾</a>
             <a href="#">SouthKorea | 대한민국</a>
             <a href="#">India</a>
-          </Region>
-          <Region>
             <h3>Pacific</h3>
             <a href="#">Australia</a>
             <a href="#">New Zeeland</a>
-          </Region>
+          </div>
         </Language>
       )}
     </Container>
