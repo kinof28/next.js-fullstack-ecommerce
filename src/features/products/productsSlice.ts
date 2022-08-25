@@ -1,3 +1,5 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 export interface ProductPreview {
   id: number;
   name: string;
@@ -12,4 +14,12 @@ export interface Model {
   image: string;
 }
 
-const initilaState: ProductPreview[] = [];
+const initialState: ProductPreview[] = [];
+
+export const ProductsSlice = createSlice({
+  name: "Products",
+  initialState,
+  reducers: {
+    getProductsPreview: (state) => {},
+  },
+});
