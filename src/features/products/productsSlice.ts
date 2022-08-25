@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { fetchProductsPreview } from "./productsAPI";
 
 export interface ProductPreview {
   id: number;
@@ -16,10 +17,22 @@ export interface Model {
 
 const initialState: ProductPreview[] = [];
 
+export const getProductsPreview = createAsyncThunk(
+  "productsPreview",
+  async () => {
+    const result = await fetchProductsPreview();
+    console.log("result from thunk function: ", result);
+    return result;
+  }
+);
+
 export const ProductsSlice = createSlice({
   name: "Products",
   initialState,
-  reducers: {
-    getProductsPreview: (state) => {},
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(getProductsPreview.fulfilled, (state, action) => {
+      state = action.payload;
+    });
   },
 });
