@@ -7,13 +7,11 @@ const Container = styled.div`
   color: white;
   cursor: pointer;
 `;
-
 const ImageContainer = styled.div`
   background-image: url(${(props) => props.src});
   background-size: cover;
   position: relative;
   cursor: pointer;
-
   backface-visibility: hidden;
   & div {
     position: absolute;
@@ -45,7 +43,6 @@ const ImageContainer = styled.div`
     transform: scale(1.01);
   }
 `;
-
 const Title = styled.h2`
   position: absolute;
   top: 2%;
@@ -57,7 +54,6 @@ const Title = styled.h2`
   width: 1px;
   transform: scaleY(0.9);
 `;
-
 const Trending = () => {
   return (
     <Container>

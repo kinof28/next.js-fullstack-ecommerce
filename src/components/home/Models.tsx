@@ -7,7 +7,6 @@ const Container = styled.div`
     cursor: pointer;
   }
 `;
-
 const Left = styled.div`
   flex: 2;
   position: relative;
@@ -28,14 +27,12 @@ const Right = styled.div`
     object-fit: cover;
   }
 `;
-
 const LeftText = styled.div`
   position: absolute;
   top: 7%;
   left: 12%;
   width: 40%;
 `;
-
 const Title = styled.h3`
   text-transform: uppercase;
   font-size: ${(props) => (props.right ? "1.2rem" : "2.5rem")};
@@ -45,7 +42,6 @@ const Title = styled.h3`
   margin-bottom: ${(props) => (props.right ? "0px" : "2rem")};
   transform: scaleY(0.9);
 `;
-
 const Description = styled.p`
   font-size: ${(props) => (props.right ? "16px" : "18px")};
   margin-top: 10px;
@@ -53,7 +49,6 @@ const Description = styled.p`
   line-height: 18px;
   transform: scaleY(1.1);
 `;
-
 const Button = styled.div`
   margin-top: 30px;
   background-color: #fff;
@@ -63,27 +58,23 @@ const Button = styled.div`
   font-size: 14px;
   font-weight: 500;
 `;
-
 const RightTop = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
   position: relative;
 `;
-
 const RightBottom = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
   position: relative;
 `;
-
 const RightText = styled.div`
   position: absolute;
   top: 8%;
   width: 50%;
 `;
-
 const Models = () => {
   return (
     <Container>

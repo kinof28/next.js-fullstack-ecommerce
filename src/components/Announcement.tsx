@@ -9,7 +9,6 @@ const Container = styled.div`
   padding: 10px;
   border-top: 1px solid #2c2c2d;
 `;
-
 const Announcement = () => {
   return (
     <Container>

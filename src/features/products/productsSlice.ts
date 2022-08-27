@@ -22,6 +22,7 @@ export const getProductsPreview = createAsyncThunk(
   async () => {
     const result = await fetchProductsPreview();
     console.log("result from thunk function: ", result);
+
     return result;
   }
 );
@@ -31,9 +32,14 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getProductsPreview.fulfilled, (state, action) => {
-      state = action.payload;
-    });
+    builder
+      .addCase(getProductsPreview.pending, (state) => {
+        console.log("pending...");
+      })
+      .addCase(getProductsPreview.fulfilled, (state, action) => {
+        console.log("fulfilled... ", action.payload);
+        state = action.payload;
+      });
   },
 });
 

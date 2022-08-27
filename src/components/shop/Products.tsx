@@ -13,7 +13,9 @@ const Products = (props) => {
   );
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getProductsPreview);
+    console.log("products before dispatch: ", products);
+    dispatch(getProductsPreview());
+    console.log("products after dispatch: ", products);
   }, []);
 
   return (

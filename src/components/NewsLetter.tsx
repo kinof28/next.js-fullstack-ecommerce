@@ -16,7 +16,6 @@ const Container = styled.div`
   border-bottom: 1px solid #2c2c2d;
   position: relative;
 `;
-
 const Left = styled.div`
   width: 25%;
   padding-top: 4%;
@@ -28,13 +27,11 @@ const Left = styled.div`
     letter-spacing: -1px;
   }
 `;
-
 const Center = styled.div`
   width: 55%;
   background-color: #2c2c2d;
   clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
 `;
-
 const CenterContent = styled.div`
   position: absolute;
   top: 0%;
@@ -43,7 +40,6 @@ const CenterContent = styled.div`
   left: 25.1%;
   display: flex;
   justify-content: flex-start;
-  /* align-items: center; */
   clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
   background-color: black;
   padding-left: 10%;
@@ -52,7 +48,6 @@ const CenterContent = styled.div`
   line-height: 30px;
   font-weight: 500;
 `;
-
 const Right = styled.div`
   padding-top: 3%;
   width: 15%;
@@ -65,7 +60,6 @@ const Right = styled.div`
     letter-spacing: -1px;
   }
 `;
-
 const Form = styled.div`
   & input {
     padding: 10px 20px;
@@ -86,7 +80,6 @@ const Form = styled.div`
     color: grey;
   }
 `;
-
 const Column = styled.div`
   margin-right: 50px;
   & a {
@@ -97,7 +90,6 @@ const Column = styled.div`
     color: grey;
   }
 `;
-
 const IconsContainer = styled.div`
   display: flex;
   font-size: 30px;
@@ -111,7 +103,6 @@ const IconsContainer = styled.div`
     color: grey;
   }
 `;
-
 const NewsLetter = () => {
   return (
     <Container>

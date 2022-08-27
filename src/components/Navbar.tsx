@@ -10,7 +10,6 @@ const Container = styled.div`
   width: 100%;
   z-index: 1;
 `;
-
 const Wrapper = styled.div`
   background-color: black;
   color: white;
@@ -20,16 +19,13 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-
 const Left = styled.div`
   display: flex;
   align-items: center;
 `;
-
 const Logo = styled.img`
   height: 65px;
 `;
-
 const Title = styled.h1`
   padding: 0;
   margin: 0;
@@ -39,7 +35,6 @@ const Title = styled.h1`
   opacity: ${(props) => (props.top ? 1 : 0)};
   width: ${(props) => (props.top ? "11vw" : "0vw")};
 `;
-
 const Home = styled.div`
   display: flex;
   align-items: center;
@@ -47,7 +42,6 @@ const Home = styled.div`
     cursor: pointer;
   }
 `;
-
 const URL = styled.div`
   padding: 0px 0px;
   margin-left: 30px;
@@ -62,13 +56,11 @@ const URL = styled.div`
     margin: 12px 0px;
   }
 `;
-
 const Right = styled.div`
   display: flex;
   align-items: center;
   margin-right: 10px;
 `;
-
 const Language = styled.div`
   display: flex;
   flex-direction: column;
@@ -80,7 +72,6 @@ const Language = styled.div`
   }
   margin-left: 25px;
 `;
-
 const Icon = styled.div`
   margin-right: 30px;
   margin-top: 5px;

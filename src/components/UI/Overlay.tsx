@@ -13,7 +13,6 @@ const Background = styled.div`
   transition: opacity 0.25s ease-out;
   z-index: 0;
 `;
-
 const Overlay = (props) => {
   return (
     <Background

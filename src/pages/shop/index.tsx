@@ -9,7 +9,6 @@ import Products from "../../components/shop/Products";
 const Title = styled.h1`
   text-align: center;
 `;
-
 const ShopPage: NextPage = () => {
   const [title, setTitle] = useState("Shop");
   return (

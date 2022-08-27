@@ -68,7 +68,6 @@ const Shop = styled.div`
     color: #949494;
   }
 `;
-
 const Inside = styled.div`
   display: flex;
   & h3 {
@@ -80,7 +79,6 @@ const Inside = styled.div`
     letter-spacing: -2px;
   }
 `;
-
 const Support = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -98,7 +96,6 @@ const Support = styled.div`
     color: #949494;
   }
 `;
-
 const Language = styled.div`
   display: flex;
   width: 80%;
@@ -122,7 +119,6 @@ const Language = styled.div`
     font-size: 1rem;
   }
 `;
-
 const ImageContainer = styled.div`
   border-left: 1px solid #2c2c2d;
   cursor: pointer;
@@ -137,18 +133,15 @@ const ImageContainer = styled.div`
     opacity: 0.9;
   }
 `;
-
 const Red = styled.span`
   color: #ff5100;
   &:hover {
     color: #949494;
   }
 `;
-
 const Grey = styled.span`
   color: #949494;
 `;
-
 const DropDown = (props) => {
   return (
     <Container displayed={props.displayed}>

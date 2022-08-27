@@ -16,8 +16,9 @@ const productPreviewHardCoded: ProductPreview[] = [
 const productPreviewHandler: NextApiHandler = (
   request: NextApiRequest,
   response: NextApiResponse
-): ProductPreview[] => {
-  return productPreviewHardCoded;
+) => {
+  // console.log("backend response: ", productPreviewHardCoded);
+  response.json(productPreviewHardCoded);
 };
 
 export default productPreviewHandler;

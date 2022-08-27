@@ -11,7 +11,6 @@ const Container = styled.div`
   font-size: 0.7rem;
   font-weight: 400;
 `;
-
 const Left = styled.div`
   flex: 1;
   display: flex;
@@ -25,14 +24,12 @@ const Left = styled.div`
     color: white;
   }
 `;
-
 const Center = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-
 const Right = styled.div`
   flex: 1;
   display: flex;
@@ -41,7 +38,6 @@ const Right = styled.div`
     width: 75%;
   }
 `;
-
 const Footer = () => {
   return (
     <Container>

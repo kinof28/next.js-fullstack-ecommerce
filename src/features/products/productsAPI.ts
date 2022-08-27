@@ -1,6 +1,7 @@
 import { ProductPreview } from "./productsSlice";
 
 export async function fetchProductsPreview(): Promise<ProductPreview[]> {
+  console.log("async function from products api");
   const response = await fetch("/api/productsPreview", {
     method: "Get",
     headers: {

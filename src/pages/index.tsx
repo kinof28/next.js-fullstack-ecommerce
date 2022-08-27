@@ -3,7 +3,6 @@ import Head from "next/head";
 import styled from "styled-components";
 
 import Announcement from "../components/Announcement";
-import Container from "../components/UI/Container";
 import Models from "../components/home/Models";
 import Trending from "../components/home/Trending";
 import NewsLetter from "../components/NewsLetter";
@@ -13,7 +12,6 @@ const Image = styled.img`
   cursor: pointer;
   margin-top: ${(props) => props.second && "-4px"};
 `;
-
 const IndexPage: NextPage = () => {
   return (
     <>
