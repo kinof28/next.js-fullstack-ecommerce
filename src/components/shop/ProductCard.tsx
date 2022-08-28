@@ -1,9 +1,20 @@
 import styled from "styled-components";
 import { ProductPreview } from "../../features/products/productsSlice";
 
-const Container = styled.div``;
+const Container = styled.article`
+  & img {
+    width: 100%;
+  }
+`;
 const MainImage = styled.img``;
-const ModelImages = styled.div``;
+const ModelImages = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  & img {
+    width: 5vw;
+  }
+`;
 
 const ProductCard = (props) => {
   const product: ProductPreview = props.product;

@@ -11,6 +11,7 @@ import ProductCard from "./ProductCard";
 
 const Container = styled.div`
   display: flex;
+  gap: 2vw;
 `;
 
 const Products = (props) => {
