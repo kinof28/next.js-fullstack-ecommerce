@@ -28,7 +28,6 @@ export const getProductsPreview = createAsyncThunk(
     return result;
   }
 );
-
 export const productsSlice = createSlice({
   name: "products",
   initialState,

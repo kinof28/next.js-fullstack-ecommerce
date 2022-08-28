@@ -5,6 +5,7 @@ import {
   getProductsPreview,
   ProductPreview,
 } from "../../features/products/productsSlice";
+import ProductCard from "./ProductCard";
 
 const Products = (props) => {
   const dispatch = useDispatch();
@@ -19,13 +20,9 @@ const Products = (props) => {
     <div>
       <h4>products: </h4>
       {products.map((e) => (
-        <p>
-          {e.name} <br />
-          {e.title} <br />
-          {e.price} <br />
-          <img src={e.mainImag} alt={e.title} />
-        </p>
+        <ProductCard product={e} />
       ))}
+      <button onClick={() => dispatch(getProductsPreview())}>Refresh</button>
     </div>
   );
 };
