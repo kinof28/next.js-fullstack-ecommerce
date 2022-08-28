@@ -15,13 +15,15 @@ export interface Model {
   image: string;
 }
 
-const initialState: ProductPreview[] = [];
+const initialState = {
+  value: [],
+};
 
 export const getProductsPreview = createAsyncThunk(
   "productsPreview",
   async () => {
     const result = await fetchProductsPreview();
-    console.log("result from thunk function: ", result);
+    // console.log("result from thunk function: ", result);
 
     return result;
   }
@@ -33,14 +35,16 @@ export const productsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getProductsPreview.pending, (state) => {
-        console.log("pending...");
-      })
+      // .addCase(getProductsPreview.pending, (state) => {
+      //   state.value = [];
+      //   console.log("pending...");
+      // })
       .addCase(getProductsPreview.fulfilled, (state, action) => {
-        console.log("fulfilled... ", action.payload);
-        state = action.payload;
+        state.value = action.payload;
       });
   },
 });
 
 export default productsSlice.reducer;
+
+// export const { printState } = productsSlice.actions;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "../../app/store";
 import {
@@ -7,20 +7,17 @@ import {
 } from "../../features/products/productsSlice";
 
 const Products = (props) => {
-  // const [products,setProducts]=useState([]);
-  const products: ProductPreview[] = useSelector(
-    (state: AppState) => state.products
-  );
   const dispatch = useDispatch();
+  const products: ProductPreview[] = useSelector(
+    (state: AppState) => state.products.value
+  );
   useEffect(() => {
-    console.log("products before dispatch: ", products);
     dispatch(getProductsPreview());
-    console.log("products after dispatch: ", products);
   }, []);
 
   return (
     <div>
-      <h4>products:</h4>
+      <h4>products: </h4>
       {products.map((e) => (
         <p>
           {e.name} <br />
@@ -29,7 +26,6 @@ const Products = (props) => {
           <img src={e.mainImag} alt={e.title} />
         </p>
       ))}
-      ;
     </div>
   );
 };
