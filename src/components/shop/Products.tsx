@@ -12,6 +12,8 @@ import ProductCard from "./ProductCard";
 const Container = styled.div`
   display: flex;
   gap: 2vw;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const Products = (props) => {
@@ -25,13 +27,12 @@ const Products = (props) => {
 
   return (
     <>
+      <button onClick={() => dispatch(getProductsPreview())}>Refresh</button>
       <Container>
-        <h4>products: </h4>
         {products.map((e) => (
           <ProductCard product={e} />
         ))}
       </Container>
-      <button onClick={() => dispatch(getProductsPreview())}>Refresh</button>
     </>
   );
 };

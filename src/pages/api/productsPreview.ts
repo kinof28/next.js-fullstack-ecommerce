@@ -77,6 +77,67 @@ const productPreviewHardCoded: ProductPreview[] = [
       },
     ],
   },
+  {
+    id: 4,
+    name: "transparency hesh evo wireless headphones",
+    title: "Transparency Hesh® Evo Wireless Headphones",
+    price: 115,
+    mainImag:
+      "https://cdn11.bigcommerce.com/s-k11cg5mzh9/images/stencil/500x659/products/395/43393/bd2253a9671dac36a95faf821b52e78935050140be1718ce001f6aace45cf25c__57550.1659976693.png?c=2",
+    models: [
+      {
+        id: 8184,
+        image:
+          "https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/bd2253a9671dac36a95faf821b52e78935050140be1718ce001f6aace45cf25c.png",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "transparency-jib-true-2-wireless-earbuds",
+    title: "Transparency Jib™ True 2 Wireless Earbuds",
+    price: 50,
+    mainImag:
+      "https://cdn11.bigcommerce.com/s-k11cg5mzh9/images/stencil/500x659/products/394/48002/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74__42487.1660768896.png?c=2",
+    models: [
+      {
+        id: 8183,
+        image:
+          "https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74.png",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "transparency-jib-true-2-wireless-earbuds",
+    title: "Transparency Jib™ True 2 Wireless Earbuds",
+    price: 50,
+    mainImag:
+      "https://cdn11.bigcommerce.com/s-k11cg5mzh9/images/stencil/500x659/products/394/48002/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74__42487.1660768896.png?c=2",
+    models: [
+      {
+        id: 8183,
+        image:
+          "https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74.png",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    name: "transparency-jib-true-2-wireless-earbuds",
+    title: "Transparency Jib™ True 2 Wireless Earbuds",
+    price: 50,
+    mainImag:
+      "https://cdn11.bigcommerce.com/s-k11cg5mzh9/images/stencil/500x659/products/394/48002/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74__42487.1660768896.png?c=2",
+    models: [
+      {
+        id: 8183,
+        image:
+          "https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74.png",
+      },
+    ],
+  },
 ];
 
 const productPreviewHandler: NextApiHandler = (
