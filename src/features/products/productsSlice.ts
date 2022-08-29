@@ -13,6 +13,7 @@ export interface ProductPreview {
 export interface Model {
   id: number;
   image: string;
+  name: string;
 }
 
 const initialState = {

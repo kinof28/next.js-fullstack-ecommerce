@@ -24,13 +24,14 @@ const Products = (props) => {
   useEffect(() => {
     dispatch(getProductsPreview());
   }, []);
+  //TODO: Pagination needed in this component
 
   return (
     <>
       <button onClick={() => dispatch(getProductsPreview())}>Refresh</button>
       <Container>
         {products.map((e) => (
-          <ProductCard product={e} />
+          <ProductCard product={e} key={e.id} />
         ))}
       </Container>
     </>

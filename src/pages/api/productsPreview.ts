@@ -14,11 +14,13 @@ const productPreviewHardCoded: ProductPreview[] = [
         id: 8236,
         image:
           "https://skdy-assets.s3.amazonaws.com/b4a90d50f702b9aa4859d1abc11e3b73124d4947a3061aa35c94f15539139e3b.png",
+        name: "Chill Grey/Yellow",
       },
       {
         id: 8235,
         image:
           "https://skdy-assets.s3.amazonaws.com/354617179bedf58dead9b2d26d6cf6a62b282a7a8f1dc6ee7bbaaca91396926c.png",
+        name: "90's Vacation",
       },
     ],
   },
@@ -34,21 +36,25 @@ const productPreviewHardCoded: ProductPreview[] = [
         id: 8154,
         image:
           "https://cdn11.bigcommerce.com/s-k11cg5mzh9/product_images/attribute_value_images/8154.preview.jpg?t=1655834524",
+        name: "True Black",
       },
       {
         id: 8155,
         image:
           "https://cdn11.bigcommerce.com/s-k11cg5mzh9/product_images/attribute_value_images/8155.preview.jpg?t=1655834524",
+        name: "Dark Blue/Green",
       },
       {
         id: 8153,
         image:
           "https://cdn11.bigcommerce.com/s-k11cg5mzh9/product_images/attribute_value_images/8153.preview.jpg?t=1655834525",
+        name: "Chill Grey",
       },
       {
         id: 8156,
         image:
           "https://cdn11.bigcommerce.com/s-k11cg5mzh9/product_images/attribute_value_images/8156.preview.jpg?t=1655834526",
+        name: "Light Grey/Blue",
       },
     ],
   },
@@ -64,16 +70,19 @@ const productPreviewHardCoded: ProductPreview[] = [
         id: 8015,
         image:
           "https://skdy-assets.s3.amazonaws.com/a8cc448f8ec5adfda80aa344370f61dbc1860abbd49648478a0cb3ba494fc986.jpg",
+        name: "Dark Blue/Green",
       },
       {
         id: 8016,
         image:
           "https://skdy-assets.s3.amazonaws.com/df7ce3d9546fdb41d7cd5ca25f8177f4f675cd2584ff03839441f40853993cef.jpg",
+        name: "Light Grey/Blue",
       },
       {
         id: 8014,
         image:
           "https://skdy-assets.s3.amazonaws.com/1a3aac7fa8c821cbb605b86ce36e141cc4591c8125129eca4fafcfc257676664.jpg",
+        name: "Black/Orange",
       },
     ],
   },
@@ -89,6 +98,7 @@ const productPreviewHardCoded: ProductPreview[] = [
         id: 8184,
         image:
           "https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/bd2253a9671dac36a95faf821b52e78935050140be1718ce001f6aace45cf25c.png",
+        name: "Transparency Blue",
       },
     ],
   },
@@ -104,11 +114,12 @@ const productPreviewHardCoded: ProductPreview[] = [
         id: 8183,
         image:
           "https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74.png",
+        name: "Transparency Green",
       },
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: "transparency-jib-true-2-wireless-earbuds",
     title: "Transparency Jib™ True 2 Wireless Earbuds",
     price: 50,
@@ -119,12 +130,12 @@ const productPreviewHardCoded: ProductPreview[] = [
         id: 8183,
         image:
           "https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74.png",
+        name: "Transparency Green",
       },
     ],
   },
-
   {
-    id: 5,
+    id: 7,
     name: "transparency-jib-true-2-wireless-earbuds",
     title: "Transparency Jib™ True 2 Wireless Earbuds",
     price: 50,
@@ -135,6 +146,7 @@ const productPreviewHardCoded: ProductPreview[] = [
         id: 8183,
         image:
           "https://jasper-pimstorage-skullcandy.s3.us-west-1.amazonaws.com/ba024c392854a9eb1a9f60f96f2a3a65646fa07bf40816c7dae80651a6209e74.png",
+        name: "Transparency Green",
       },
     ],
   },
