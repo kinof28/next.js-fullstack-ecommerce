@@ -6,16 +6,19 @@ const Container = styled.article`
   font-size: 0.825rem;
   padding: 1rem 3rem;
   flex: 0 1 30%;
+  cursor: pointer;
   & p {
-    /* padding: 0; */
     margin: 0;
     line-height: 1.5rem;
   }
   & img {
     width: 100%;
+    transition: transform 0.25s ease-in-out;
+  }
+  &:hover img#main-img {
+    transform: scale(1.03);
   }
 `;
-const MainImage = styled.img``;
 const ModelImages = styled.div`
   display: flex;
   width: 100%;
@@ -30,8 +33,8 @@ const ProductCard = (props) => {
   const product: ProductPreview = props.product;
   return (
     <Container>
-      {/* <MainImage /> */}
-      <img src={product.mainImag} alt={product.title} />
+      {/* <MainImage src={product.mainImag} alt={product.title} /> */}
+      <img src={product.mainImag} alt={product.title} id="main-img" />
       <ModelImages>
         {product.models.map((model) => (
           <img src={model.image} alt={model.id.toString()} />
