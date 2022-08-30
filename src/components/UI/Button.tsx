@@ -6,10 +6,12 @@ const ButtonElement = styled.div`
   position: relative;
   background-color: #ededed;
   padding: 1rem 2rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   overflow: hidden;
   text-transform: uppercase;
   white-space: nowrap;
+  transform: scaleY(0.86);
+  letter-spacing: 1px;
   & div {
     width: 20px;
     background-color: #ddd;
