@@ -1,4 +1,6 @@
+import Button from "../UI/Button";
+
 const Filter = (props) => {
-  return <h1>Filter</h1>;
+  return <Button value="True Wirless" />;
 };
 export default Filter;
