@@ -8,6 +8,10 @@ import Products from "../../components/shop/Products";
 
 const Title = styled.h1`
   text-align: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -3px;
 `;
 const ShopPage: NextPage = () => {
   const [title, setTitle] = useState("Shop");
