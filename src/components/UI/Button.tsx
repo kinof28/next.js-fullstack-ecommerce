@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 const ButtonElement = styled.div`
-  border: none;
   cursor: pointer;
-  display: inline;
+  display: inline-block;
   position: relative;
   background-color: #ededed;
   padding: 1rem 2rem;
   font-size: 0.9rem;
   overflow: hidden;
+  text-transform: uppercase;
+  white-space: nowrap;
   & div {
-    /* content: ""; */
     width: 20px;
     background-color: #ddd;
     height: 100%;
@@ -21,10 +21,10 @@ const ButtonElement = styled.div`
     transition: width 0.36s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   &:hover div {
-    width: 100%;
+    width: 200%;
   }
   & span {
-    z-index: 10;
+    position: relative;
   }
 `;
 

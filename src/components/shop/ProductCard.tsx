@@ -67,7 +67,7 @@ const ProductCard = (props) => {
       <img src={product.mainImag} alt={product.title} id="main-img" />
       <ModelImages>
         {product.models.map((model) => (
-          <ModelImage>
+          <ModelImage key={model.id}>
             <img src={model.image} alt={model.name} title={model.name} />
             <div>{model.name}</div>
           </ModelImage>
