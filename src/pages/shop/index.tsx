@@ -12,6 +12,7 @@ const ShopPage: NextPage = () => {
     <>
       <Head>
         <title>{title}</title>
+        <link rel="icon" href="/favicon-32x32.webp" />
       </Head>
       <Announcement />
       <Title>{title}</Title>
