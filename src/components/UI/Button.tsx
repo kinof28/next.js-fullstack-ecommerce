@@ -4,19 +4,19 @@ const ButtonElement = styled.div`
   cursor: pointer;
   display: inline-block;
   position: relative;
-  background-color: #ededed;
+  background-color: ${(props) => (props.dark ? "#444" : "#ededed")};
+  color: ${(props) => (props.dark ? "#fff" : "#000")};
   padding: 1rem 2rem;
   font-size: 0.85rem;
   overflow: hidden;
   text-transform: uppercase;
   white-space: nowrap;
-  transform: scaleY(0.86);
   letter-spacing: 1px;
   text-align: center;
   flex: 1;
   & div {
     width: 20px;
-    background-color: #ddd;
+    background-color: ${(props) => (props.dark ? "#2c2c2d" : "#ddd")};
     height: 100%;
     position: absolute;
     top: 0;
@@ -34,7 +34,7 @@ const ButtonElement = styled.div`
 
 const Button = (props) => {
   return (
-    <ButtonElement>
+    <ButtonElement dark={props.dark}>
       <div></div>
       <span>{props.value}</span>
     </ButtonElement>
