@@ -12,6 +12,8 @@ const ButtonElement = styled.div`
   white-space: nowrap;
   transform: scaleY(0.86);
   letter-spacing: 1px;
+  text-align: center;
+  flex: 1;
   & div {
     width: 20px;
     background-color: #ddd;
@@ -23,7 +25,7 @@ const ButtonElement = styled.div`
     transition: width 0.36s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   &:hover div {
-    width: 200%;
+    width: 140%;
   }
   & span {
     position: relative;

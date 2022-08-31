@@ -28,7 +28,7 @@ const Products = (props) => {
 
   return (
     <>
-      <button onClick={() => dispatch(getProductsPreview())}>Refresh</button>
+      {/* <button onClick={() => dispatch(getProductsPreview())}>Refresh</button> */}
       <Container>
         {products.map((e) => (
           <ProductCard product={e} key={e.id} />
