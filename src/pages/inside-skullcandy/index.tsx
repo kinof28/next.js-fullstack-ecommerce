@@ -13,6 +13,7 @@ const InsideSkullcandyPage: NextPage = () => {
         <link rel="icon" href="/favicon-32x32.webp" />
       </Head>
       <Announcement />
+      <Container>this is inside skullcandy page</Container>
     </>
   );
 };
