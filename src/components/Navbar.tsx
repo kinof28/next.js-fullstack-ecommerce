@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { HiOutlineSearch, HiOutlineUser } from "react-icons/hi";
-import { BsBag, BsWindowSidebar } from "react-icons/bs";
-import { useEffect, useRef, useState } from "react";
+import { BsBag } from "react-icons/bs";
+import { useEffect, useState } from "react";
 import DropDown from "./UI/DropDown";
 
 const Container = styled.div`
@@ -108,10 +108,12 @@ const Navbar = (props) => {
       <Container>
         <Wrapper>
           <Left>
-            <Home>
-              <Logo src="./logo.png"></Logo>
-              <Title top={top}>Skullcandy</Title>
-            </Home>
+            <Link href={"/"}>
+              <Home>
+                <Logo src="./logo.png"></Logo>
+                <Title top={top}>Skullcandy</Title>
+              </Home>
+            </Link>
             <URL
               onMouseEnter={() => {
                 props.dropDown();
