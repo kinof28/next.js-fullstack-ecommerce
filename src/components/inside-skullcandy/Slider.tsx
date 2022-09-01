@@ -3,10 +3,17 @@ import styled from "styled-components";
 const Container = styled.div``;
 const ImageContainer = styled.div`
   display: flex;
-  overflow: hidden;
-  transform: translate3d(0 0 100%);
+  /* transform: translateX(-100%); */
+  /* overflow:; */
   & img {
     width: 100%;
+    /* opacity: 0; */
+    display: none;
+  }
+  & img:nth-child(2) {
+    display: block;
+    /* opacity: 1; */
+    /* border: 2px solid red; */
   }
 `;
 const Slider = () => {

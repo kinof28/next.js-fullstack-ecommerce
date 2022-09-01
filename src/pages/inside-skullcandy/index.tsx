@@ -3,7 +3,7 @@ import Head from "next/head";
 import Announcement from "../../components/Announcement";
 import Section from "../../components/inside-skullcandy/Section";
 import Slider from "../../components/inside-skullcandy/Slider";
-import Container from "../../components/UI/Container";
+// import Container from "../../components/UI/Container";
 
 const InsideSkullcandyPage: NextPage = () => {
   return (
@@ -20,7 +20,7 @@ const InsideSkullcandyPage: NextPage = () => {
       {/* <Section />
       <Section />
       <Section /> */}
-      <Container>this is inside skullcandy page</Container>
+      {/* <Container>this is inside skullcandy page</Container> */}
     </>
   );
 };
