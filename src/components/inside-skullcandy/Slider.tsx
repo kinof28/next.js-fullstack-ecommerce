@@ -1,25 +1,30 @@
+import { useState } from "react";
 import styled from "styled-components";
+import { useInterval } from "../../app/hooks";
 
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100%;
+  overflow: hidden;
+`;
 const ImageContainer = styled.div`
   display: flex;
-  /* transform: translateX(-100%); */
-  /* overflow:; */
+  transition: all 1s ease;
+  transform: translateX(-${(props) => props.translateX});
   & img {
     width: 100%;
-    /* opacity: 0; */
-    display: none;
-  }
-  & img:nth-child(2) {
-    display: block;
-    /* opacity: 1; */
-    /* border: 2px solid red; */
   }
 `;
 const Slider = () => {
+  const [translateX, setTranslateX] = useState(0);
+  useInterval(() => {
+    setTranslateX((prev) => {
+      if (prev < 300) return prev + 100;
+      else return 0;
+    });
+  }, 3000);
   return (
     <Container>
-      <ImageContainer>
+      <ImageContainer translateX={translateX + "%"}>
         <img src="./inside-skullcandy/slider_desktop_1.avif" alt="" />
         <img src="./inside-skullcandy/slider_desktop_2.avif" alt="" />
         <img src="./inside-skullcandy/slider_desktop_3.avif" alt="" />
