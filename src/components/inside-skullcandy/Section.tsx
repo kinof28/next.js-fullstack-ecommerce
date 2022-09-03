@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import Button from "../UI/Button";
 
 const Container = styled.div`
+  cursor: pointer;
+  background-color: #000;
   position: relative;
   height: 65vh;
   padding: 3rem;
@@ -9,12 +12,19 @@ const Container = styled.div`
   flex-direction: ${(props) => (props.direct ? "row" : "row-reverse")};
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
   & img {
     width: 100%;
+    height: 65vh;
+    object-fit: cover;
     position: absolute;
     top: 0px;
     left: 0;
-    z-index: -1;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 50ms;
+  }
+  &:hover img {
+    transform: scale(1.04);
+    opacity: 0.9;
   }
   & div {
     z-index: 0;
@@ -33,13 +43,14 @@ const Container = styled.div`
     letter-spacing: -3px;
     margin: 0;
   }
-  & button {
+  /* & button {
+    cursor: pointer;
     border: none;
     outline: none;
     text-transform: uppercase;
     padding: 1rem 2rem;
     font-size: 0.8rem;
-  }
+  } */
   & p {
     font-weight: 500;
     font-size: 1.1rem;
@@ -55,7 +66,7 @@ const Section = (props) => {
       <div>
         {props.title}
         <p>{props.description}</p>
-        <button>Learn More</button>
+        <Button value="Learn More"></Button>
       </div>
     </Container>
   );
