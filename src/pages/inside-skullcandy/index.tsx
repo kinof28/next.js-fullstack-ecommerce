@@ -32,7 +32,7 @@ const InsideSkullcandyPage: NextPage = () => {
       <Section
         image="./inside-skullcandy/desktop_2.avif"
         title={<h2>Our Culture</h2>}
-        description="Get a look at our unique office life in park city, Utah."
+        description="Get a look at our unique office life in Park City, Utah."
         direct={false}
       />
       <Section

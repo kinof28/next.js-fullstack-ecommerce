@@ -26,7 +26,6 @@ const Container = styled.div`
     margin-top: 0;
     font-size: 1.1rem;
     line-height: 1.7rem;
-    /* padding: 0 0.5rem; */
   }
 `;
 const MainSection = (props) => {
