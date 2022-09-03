@@ -4,6 +4,7 @@ import Announcement from "../../components/Announcement";
 import Main from "../../components/inside-skullcandy/Main";
 import Section from "../../components/inside-skullcandy/Section";
 import Slider from "../../components/inside-skullcandy/Slider";
+import NewsLetter from "../../components/NewsLetter";
 // import Container from "../../components/UI/Container";
 
 const InsideSkullcandyPage: NextPage = () => {
@@ -51,6 +52,7 @@ const InsideSkullcandyPage: NextPage = () => {
         direct={false}
       />
       <Main />
+      <NewsLetter />
     </>
   );
 };
