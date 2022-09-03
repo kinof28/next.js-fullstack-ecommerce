@@ -16,7 +16,11 @@ const InsideSkullcandyPage: NextPage = () => {
       </Head>
       <Announcement />
       <Slider />
-      <Section />
+      <Section
+        image="./inside-skullcandy/desktop_1.avif"
+        title="Our Mission, Vision and Values"
+        description="See the principles that guide the way we work and play."
+      />
       {/* <Section />
       <Section />
       <Section /> */}
