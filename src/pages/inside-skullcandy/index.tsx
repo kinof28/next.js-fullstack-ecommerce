@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Announcement from "../../components/Announcement";
+import Main from "../../components/inside-skullcandy/Main";
 import Section from "../../components/inside-skullcandy/Section";
 import Slider from "../../components/inside-skullcandy/Slider";
 // import Container from "../../components/UI/Container";
@@ -49,6 +50,7 @@ const InsideSkullcandyPage: NextPage = () => {
         description="Meet the team that will help you find your own frequency."
         direct={false}
       />
+      <Main />
     </>
   );
 };

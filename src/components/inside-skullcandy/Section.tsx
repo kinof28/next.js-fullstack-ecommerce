@@ -43,14 +43,6 @@ const Container = styled.div`
     letter-spacing: -3px;
     margin: 0;
   }
-  /* & button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    text-transform: uppercase;
-    padding: 1rem 2rem;
-    font-size: 0.8rem;
-  } */
   & p {
     font-weight: 500;
     font-size: 1.1rem;
