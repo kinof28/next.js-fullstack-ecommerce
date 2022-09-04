@@ -165,11 +165,13 @@ const Navbar = (props) => {
               </Language>
             </Icon>
             <Icon>
-              <HiOutlineUser
-                onMouseEnter={() => {
-                  props.dropUp();
-                }}
-              />
+              <Link href="/login">
+                <HiOutlineUser
+                  onMouseEnter={() => {
+                    props.dropUp();
+                  }}
+                />
+              </Link>
             </Icon>
             <Icon>
               <HiOutlineSearch
