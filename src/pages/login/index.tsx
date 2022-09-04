@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 import Announcement from "../../components/Announcement";
 import NewsLetter from "../../components/NewsLetter";
@@ -45,6 +46,10 @@ const Right = styled.div`
   }
 `;
 const LoginPage: NextPage = () => {
+  const router = useRouter();
+  const gotoSubscribePage = () => {
+    router.push("/subscribe");
+  };
   return (
     <>
       <Head>
@@ -67,7 +72,7 @@ const LoginPage: NextPage = () => {
           <Button
             value="create account"
             dark={true}
-            onClick={() => console.log("sign up clicked")}
+            onClick={() => gotoSubscribePage()}
           />
         </Right>
       </Container>
