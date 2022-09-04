@@ -1,6 +1,5 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import styled from "styled-components";
 import Announcement from "../../components/Announcement";
 import NewsLetter from "../../components/NewsLetter";
@@ -65,13 +64,11 @@ const LoginPage: NextPage = () => {
             <li>Access your order history</li>
             <li>Track new orders</li>
           </ul>
-          {/* <Link href="/subscribe"> */}
           <Button
             value="create account"
             dark={true}
             onClick={() => console.log("sign up clicked")}
           />
-          {/* </Link> */}
         </Right>
       </Container>
       <NewsLetter />

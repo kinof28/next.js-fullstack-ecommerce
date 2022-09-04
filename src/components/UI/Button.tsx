@@ -34,7 +34,7 @@ const ButtonElement = styled.div`
 
 const Button = (props) => {
   return (
-    <ButtonElement dark={props.dark}>
+    <ButtonElement dark={props.dark} onClick={props.onClick}>
       <div></div>
       <span>{props.value}</span>
     </ButtonElement>
