@@ -1,10 +1,13 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import Announcement from "../../components/Announcement";
 import NewsLetter from "../../components/NewsLetter";
 import Button from "../../components/UI/Button";
+import Checkbox from "../../components/UI/Checkbox";
+import Input from "../../components/UI/Input";
 import Title from "../../components/UI/Title";
 
 const Container = styled.div`
@@ -14,8 +17,9 @@ const Container = styled.div`
   }
 `;
 const Left = styled.div`
-  border: 2px solid red;
+  /* border: 2px solid red; */
   min-width: 50%;
+  padding: 4rem;
 `;
 const Right = styled.div`
   background-color: #ddd;
@@ -59,7 +63,15 @@ const LoginPage: NextPage = () => {
       <Announcement />
       <Title>Sign in</Title>
       <Container>
-        <Left></Left>
+        <Left>
+          <Input type="email" label="Email Address:" />
+          <Input type="password" label="Password:" />
+          <Checkbox />
+          <div>
+            <Button value="sign in" />
+            <Link href="/reset-password">Forgot your password?</Link>
+          </div>
+        </Left>
         <Right>
           <h3>New Customer?</h3>
           Create an account with us and you'll be able to:
