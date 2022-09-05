@@ -4,6 +4,8 @@ const Container = styled.div`
   & label {
     display: block;
     margin: 0.5rem 0px;
+    font-size: 0.9rem;
+    font-weight: 500;
   }
   & input {
     width: 100%;
@@ -31,6 +33,7 @@ const LabelContainer = styled.div`
     text-transform: uppercase;
     font-size: 0.65rem;
     color: #757575;
+    transform: scaleY(0.9);
   }
 `;
 const Input = (props) => {
