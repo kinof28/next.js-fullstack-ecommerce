@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   & label {
     display: block;
+    margin: 0.5rem 0px;
   }
   & input {
     width: 100%;

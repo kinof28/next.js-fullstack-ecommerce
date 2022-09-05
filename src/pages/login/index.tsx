@@ -12,16 +12,21 @@ import Title from "../../components/UI/Title";
 
 const Container = styled.div`
   display: flex;
-  & div {
-    flex: 1;
-  }
 `;
 const Left = styled.div`
-  /* border: 2px solid red; */
+  flex: 1;
   min-width: 50%;
-  padding: 4rem;
+  padding: 3rem 1rem 1rem 4.5rem;
+  & div#action {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
 `;
 const Right = styled.div`
+  flex: 1;
   background-color: #ddd;
   padding: 3rem;
   margin: 1rem 5rem 5rem 2rem;
@@ -67,8 +72,10 @@ const LoginPage: NextPage = () => {
           <Input type="email" label="Email Address:" />
           <Input type="password" label="Password:" />
           <Checkbox />
-          <div>
-            <Button value="sign in" />
+          <div id="action">
+            <div>
+              <Button value="sign in" dark={true} />
+            </div>
             <Link href="/reset-password">Forgot your password?</Link>
           </div>
         </Left>
