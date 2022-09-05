@@ -69,7 +69,7 @@ const LoginPage: NextPage = () => {
       <Title>Sign in</Title>
       <Container>
         <Left>
-          <Input type="email" label="Email Address:" />
+          <Input type="email" label="Email Address:" required={true} />
           <Input type="password" label="Password:" />
           <Checkbox />
           <div id="action">

@@ -21,11 +21,24 @@ const Container = styled.div`
     border-color: #949494;
   }
 `;
-
+const LabelContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  & span {
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    color: #757575;
+  }
+`;
 const Input = (props) => {
   return (
     <Container>
-      <label htmlFor="input">{props.label}</label>
+      <LabelContainer>
+        <label htmlFor="input">{props.label}</label>
+        {props.required && <span>required</span>}
+      </LabelContainer>
       <input id="input" type={props.type} />
     </Container>
   );
