@@ -11,6 +11,7 @@ const Container = styled.div`
     background-color: #f6f6f6;
     color: #383838;
     margin-bottom: 0;
+    padding: 1rem;
     border: 1px solid #ddd;
     outline: none;
     display: block;
