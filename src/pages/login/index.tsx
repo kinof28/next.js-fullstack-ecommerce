@@ -24,6 +24,15 @@ const Left = styled.div`
     align-items: center;
     gap: 1rem;
   }
+  & a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: color 0.2s ease-out;
+  }
+  & a:hover {
+    color: grey;
+  }
 `;
 const Right = styled.div`
   flex: 1;
@@ -69,7 +78,7 @@ const LoginPage: NextPage = () => {
       <Title>Sign in</Title>
       <Container>
         <Left>
-          <Input type="email" label="Email Address:" required={true} />
+          <Input type="email" label="Email Address:" />
           <Input type="password" label="Password:" />
           <Checkbox />
           <div id="action">
