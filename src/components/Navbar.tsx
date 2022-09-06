@@ -109,7 +109,7 @@ const Navbar = (props) => {
         <Wrapper>
           <Left>
             <Link href={"/"}>
-              <Home>
+              <Home onClick={() => props.dropUp()}>
                 <Logo src="./logo.png"></Logo>
                 <Title top={top}>Skullcandy</Title>
               </Home>
@@ -117,8 +117,10 @@ const Navbar = (props) => {
             <URL
               onMouseEnter={() => {
                 props.dropDown();
+                props.whiteDropDown();
                 setDropDownContent("shop");
               }}
+              onClick={() => props.dropUp()}
             >
               <Link href={"/shop"}>shop</Link>
               <BorderBottom
@@ -128,8 +130,10 @@ const Navbar = (props) => {
             <URL
               onMouseEnter={() => {
                 props.dropDown();
+                props.whiteDropDown();
                 setDropDownContent("inside");
               }}
+              onClick={() => props.dropUp()}
             >
               <Link href={"/inside-skullcandy"}>Inside Skullcandy</Link>
               <BorderBottom
@@ -142,8 +146,10 @@ const Navbar = (props) => {
               support={true}
               onMouseEnter={() => {
                 props.dropDown();
+                props.whiteDropDown();
                 setDropDownContent("support");
               }}
+              onClick={() => props.dropUp()}
             >
               <Link href={"/support"}>Support</Link>
               <BorderBottom
@@ -156,8 +162,10 @@ const Navbar = (props) => {
                   src="./US_EN_FLAG.webp"
                   onMouseEnter={() => {
                     props.dropDown();
+                    props.whiteDropDown();
                     setDropDownContent("language");
                   }}
+                  onClick={() => props.dropUp()}
                 />
                 <BorderBottom
                   displayed={props.displayed && dropDownContent === "language"}
@@ -168,22 +176,43 @@ const Navbar = (props) => {
               <Link href="/login">
                 <HiOutlineUser
                   onMouseEnter={() => {
-                    props.dropUp();
+                    if (!props.black) props.dropUp();
                   }}
+                  onClick={() => props.dropUp()}
                 />
               </Link>
             </Icon>
             <Icon>
               <HiOutlineSearch
                 onMouseEnter={() => {
-                  props.dropUp();
+                  if (!props.black) props.dropUp();
+                }}
+                onClick={() => {
+                  if (dropDownContent === "card") {
+                    setDropDownContent("search");
+                    if (!props.displayed) props.dropDown();
+                  } else {
+                    setDropDownContent("search");
+                    props.blackDropDown();
+                    props.toggle();
+                  }
                 }}
               />
             </Icon>
             <Icon>
               <BsBag
                 onMouseEnter={() => {
-                  props.dropUp();
+                  if (!props.black) props.dropUp();
+                }}
+                onClick={() => {
+                  if (dropDownContent === "search") {
+                    setDropDownContent("card");
+                    if (!props.displayed) props.dropDown();
+                  } else {
+                    setDropDownContent("card");
+                    props.blackDropDown();
+                    props.toggle();
+                  }
                 }}
               />
             </Icon>

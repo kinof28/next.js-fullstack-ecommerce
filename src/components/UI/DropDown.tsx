@@ -1,4 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import Card from "./Card";
+import Search from "./Search";
 const fade = keyframes`
 0%{
   opacity: 0;
@@ -8,8 +10,10 @@ const fade = keyframes`
   }
 `;
 const Container = styled.div`
-  background: white;
-  color: black;
+  background: ${(props) =>
+    props.content === "card" || props.content === "search" ? "black" : "white"};
+  color: ${(props) =>
+    props.content === "card" || props.content === "search" ? "white" : "black"};
   height: fit-content;
   transform: ${(props) =>
     props.displayed ? "translate3d(0,0,0)" : "translate3d(0,-100%,0)"};
@@ -144,7 +148,7 @@ const Grey = styled.span`
 `;
 const DropDown = (props) => {
   return (
-    <Container displayed={props.displayed}>
+    <Container displayed={props.displayed} content={props.content}>
       {props.content === "shop" && (
         <Shop>
           <div>
@@ -256,6 +260,8 @@ const DropDown = (props) => {
           </div>
         </Language>
       )}
+      {props.content === "card" && <Card />}
+      {props.content === "search" && <Search />}
     </Container>
   );
 };

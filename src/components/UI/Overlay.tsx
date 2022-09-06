@@ -20,6 +20,7 @@ const Overlay = (props) => {
       onMouseEnter={() => {
         props.hovered();
       }}
+      onClick={() => props.onClick()}
     ></Background>
   );
 };
