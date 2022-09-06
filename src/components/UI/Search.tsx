@@ -1,10 +1,18 @@
 import styled from "styled-components";
-
-const Container = styled.div``;
+import { CgClose } from "react-icons/cg";
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+`;
 const Search = () => {
   return (
     <Container>
-      <h1> Search </h1>
+      <input type="text" />
+      <CgClose />
     </Container>
   );
 };
