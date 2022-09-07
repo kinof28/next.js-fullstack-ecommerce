@@ -4,18 +4,26 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 const Container = styled.div`
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 4rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   & input {
     background-color: black;
     color: white;
     padding: 0.5rem 1rem;
-    margin: 0px 1rem;
+    margin: 0.3rem 1rem;
     border: 1px solid grey;
+    border: none;
+    outline: none;
+    width: 15rem;
+    font-size: 0.7rem;
+  }
+  & input::placeholder {
+    color: white;
+    padding: 0.5rem;
   }
   & svg {
     cursor: pointer;
@@ -24,7 +32,6 @@ const Container = styled.div`
 const Search = (props) => {
   const [searchValue, setSearcValue] = useState("");
   const route = useRouter();
-
   return (
     <Container>
       <form
@@ -40,9 +47,14 @@ const Search = (props) => {
           placeholder="Search"
           value={searchValue}
           onChange={(e) => setSearcValue(e.target.value)}
+          autoFocus
         />
       </form>
-      <CgClose onClick={() => props.onClose()} />
+      <CgClose
+        onClick={() => {
+          props.onClose();
+        }}
+      />
     </Container>
   );
 };
