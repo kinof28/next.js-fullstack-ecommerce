@@ -258,7 +258,7 @@ const DropDown = (props) => {
           </div>
         </Language>
       )}
-      {props.content === "card" && <Card />}
+      {props.content === "card" && <Card onClose={props.onClose} />}
       {props.content === "search" && <Search onClose={props.onClose} />}
     </Container>
   );
