@@ -188,7 +188,7 @@ const Navbar = (props) => {
                   if (!props.black) props.dropUp();
                 }}
                 onClick={() => {
-                  if (dropDownContent === "card") {
+                  if (dropDownContent === "cart") {
                     setDropDownContent("search");
                     if (!props.displayed) props.dropDown();
                   } else {
@@ -206,10 +206,10 @@ const Navbar = (props) => {
                 }}
                 onClick={() => {
                   if (dropDownContent === "search") {
-                    setDropDownContent("card");
+                    setDropDownContent("cart");
                     if (!props.displayed) props.dropDown();
                   } else {
-                    setDropDownContent("card");
+                    setDropDownContent("cart");
                     props.blackDropDown();
                     props.toggle();
                   }

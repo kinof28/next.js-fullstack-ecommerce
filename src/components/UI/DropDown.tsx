@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import Card from "./Card";
+import Cart from "./Cart";
 import Search from "./Search";
 const fade = keyframes`
 0%{
@@ -258,7 +258,7 @@ const DropDown = (props) => {
           </div>
         </Language>
       )}
-      {props.content === "card" && <Card onClose={props.onClose} />}
+      {props.content === "cart" && <Cart onClose={props.onClose} />}
       {props.content === "search" && <Search onClose={props.onClose} />}
     </Container>
   );

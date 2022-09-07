@@ -26,7 +26,7 @@ const Container = styled.div`
     margin: 0px 7rem;
   }
 `;
-const Card = (props) => {
+const Cart = (props) => {
   return (
     <Container>
       <div>
@@ -41,4 +41,4 @@ const Card = (props) => {
     </Container>
   );
 };
-export default Card;
+export default Cart;
