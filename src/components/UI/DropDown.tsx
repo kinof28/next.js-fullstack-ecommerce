@@ -261,7 +261,7 @@ const DropDown = (props) => {
         </Language>
       )}
       {props.content === "card" && <Card />}
-      {props.content === "search" && <Search />}
+      {props.content === "search" && <Search onClose={props.onClose} />}
     </Container>
   );
 };

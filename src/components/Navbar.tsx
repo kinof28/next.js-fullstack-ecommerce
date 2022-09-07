@@ -218,7 +218,11 @@ const Navbar = (props) => {
             </Icon>
           </Right>
         </Wrapper>
-        <DropDown displayed={props.displayed} content={dropDownContent} />
+        <DropDown
+          displayed={props.displayed}
+          content={dropDownContent}
+          onClose={props.dropUp}
+        />
       </Container>
       <PlaceHolder></PlaceHolder>
     </>
