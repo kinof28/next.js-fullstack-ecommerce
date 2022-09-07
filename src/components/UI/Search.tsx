@@ -9,6 +9,7 @@ const Container = styled.div`
   justify-content: flex-end;
   align-items: center;
   color: white;
+  background-color: black;
   font-size: 1.7rem;
   & input {
     background-color: black;

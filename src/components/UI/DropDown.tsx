@@ -10,10 +10,8 @@ const fade = keyframes`
   }
 `;
 const Container = styled.div`
-  background: ${(props) =>
-    props.content === "card" || props.content === "search" ? "black" : "white"};
-  color: ${(props) =>
-    props.content === "card" || props.content === "search" ? "white" : "black"};
+  background-color: white;
+  color: black;
   height: fit-content;
   transform: ${(props) =>
     props.displayed ? "translate3d(0,0,0)" : "translate3d(0,-100%,0)"};
