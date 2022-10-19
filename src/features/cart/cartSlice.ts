@@ -1,6 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ProductPreview } from "../products/productsSlice";
 
+export interface CartItem {
+  product: ProductPreview;
+  quantity: number;
+}
 export interface Cart {
   products: ProductPreview[];
 }
