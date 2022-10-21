@@ -1,5 +1,7 @@
 import { CgClose } from "react-icons/cg";
 import styled from "styled-components";
+import { useAppSelector } from "../../app/hooks";
+import { selectCart } from "../../features/cart/cartSlice";
 
 const Container = styled.div`
   width: 100%;
@@ -27,12 +29,25 @@ const Container = styled.div`
   }
 `;
 const Cart = (props) => {
+  const cart = useAppSelector(selectCart);
+  const content =
+    cart.items.length > 0
+      ? `
+  <div>
+  <h3>Shopping cart</h3>
+  <h4> It's not empty</h4>
+  <p>Your bag is not empty</p>
+</div>
+  `
+      : `
+  <div>
+  <h3>Shopping cart</h3>
+  <p>Your bag is empty</p>
+</div>
+  `;
   return (
     <Container>
-      <div>
-        <h3>Shopping cart</h3>
-        <p>Your bag is empty</p>
-      </div>
+      {content}
       <CgClose
         onClick={() => {
           props.onClose();
