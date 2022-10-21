@@ -6,20 +6,34 @@ export interface CartItem {
   quantity: number;
 }
 export interface Cart {
-  products: ProductPreview[];
+  items: CartItem[];
 }
-const initialState: Cart = { products: [] };
+const initialState: Cart = { items: [] };
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
     addProduct: (state, action: PayloadAction<ProductPreview>) => {
-      state.products.push(action.payload);
+      let added: boolean = false;
+      for (let i = 0; i < state.items.length; i++) {
+        const element = state.items[i];
+        if (element.product.id === action.payload.id) {
+          element.quantity++;
+          added = true;
+          break;
+        }
+      }
+      if (!added) state.items.push({ product: action.payload, quantity: 1 });
     },
     removeProduct: (state, action: PayloadAction<ProductPreview>) => {
-      state.products = state.products.filter(
-        (item) => item.id != action.payload.id
-      );
+      for (let i = 0; i < state.items.length; i++) {
+        const element = state.items[i];
+        if (element.product.id === action.payload.id) {
+          element.quantity--;
+          if (element.quantity < 1) state.items.splice(i, 1);
+          break;
+        }
+      }
     },
   },
 });
