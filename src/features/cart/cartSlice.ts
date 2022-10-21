@@ -1,3 +1,4 @@
+import { AppState } from "./../../app/store";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ProductPreview } from "../products/productsSlice";
 
@@ -37,4 +38,5 @@ export const cartSlice = createSlice({
     },
   },
 });
+export const selectCart = (state: AppState) => state.cart;
 export default cartSlice.reducer;
