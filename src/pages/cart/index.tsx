@@ -5,7 +5,7 @@ import Title from "../../components/UI/Title";
 const CartPage: NextPage = () => {
   return (
     <Container>
-      <Title>Cart page</Title>
+      <Title>Cart page modified</Title>
     </Container>
   );
 };
